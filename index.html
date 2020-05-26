@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title> Lab 7 </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico" type="image/ico" sizes="48x48">
+    <link rel="manifest" href="./manifest.json">   
+</head>
+    <body>
+    <div class="login-box">
+    <img src="avatar.png" class="avatar">
+        <h1>Login Here</h1>
+            <form>
+            <p>Username</p>
+            <input type="text" id="username" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" id="password" placeholder="Enter Password">
+            <input type="submit" id="login" class="login login-submit" value="login">
+
+            <a href="#">Forget Password</a>    
+            </form>
+
+<script src="/js/main.js"></script>
+</div>
+
+
+
+  
+
+  <script>
+    if('serviceWorker' in navigator)
+    {
+      try
+      {
+        navigator.serviceWorker.register('/sw.js')
+        .then(registration => 
+        {
+            console.log('service worker registered');
+        })
+      }
+      catch (err)
+      {
+          console.log(err)
+      } 
+    }
+
+  </script>
+<script src="/js/main.js"></script>    
+    </body>
+</html>
